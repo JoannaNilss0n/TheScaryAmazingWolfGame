@@ -19,8 +19,8 @@ public class Player : MonoBehaviour
     //Referens till animatorn
     [SerializeField]private Animator anim;
     //Audio
-    public AudioSource audiosource;
-    public AudioSource audiosource2;
+    //public AudioSource audiosource;
+    //public AudioSource audiosource2;
     [SerializeField] private Transform groundCheckTransform;
     [SerializeField] private float groundCheckRadius;
     [SerializeField] private LayerMask groundCheckLayers;
@@ -71,18 +71,18 @@ public class Player : MonoBehaviour
 
          if(horizontalMove < -0.1f || horizontalMove > 0.1f)
         {
-            if (!audiosource.isPlaying)
+            /*if (!audiosource.isPlaying)
             {
-                audiosource.Play();
-            }
+                //audiosource.Play();
+            }*/
         } 
         else //if(moveInput == 0)
         {
-            audiosource.Stop();
+            //audiosource.Stop();
         }
         if (GroundCheck() == false)
         {    
-            audiosource.Stop();
+            //audiosource.Stop();
         }
 
     }
@@ -96,7 +96,7 @@ public class Player : MonoBehaviour
     public void TakeDamge(int damage)
     {
         health -= damage;
-        audiosource2.Play();
+        //audiosource2.Play();
 
         if (health <= 0)
         {
