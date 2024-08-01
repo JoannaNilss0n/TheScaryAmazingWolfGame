@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8702622410927640131}
   - component: {fileID: -4638824146404528472}
   m_Layer: 0
-  m_Name: PushableObjectwip
+  m_Name: PushableObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -88,7 +88,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2179321789289606537}
-  m_BodyType: 0
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -106,7 +106,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &8702622410927640131
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -119,6 +119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f5cc7ac926c93f44a416bae9a738c96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rb2d: {fileID: 5792643465419753483}
 --- !u!212 &-4638824146404528472
 SpriteRenderer:
   m_ObjectHideFlags: 0
