@@ -21,9 +21,9 @@ public class Player : MonoBehaviour
     //Audio
     //public AudioSource audiosource;
     //public AudioSource audiosource2;
-    [SerializeField] private Transform groundCheckTransform;
-    [SerializeField] private float groundCheckRadius;
-    [SerializeField] private LayerMask groundCheckLayers;
+    //[SerializeField] private Transform groundCheckTransform;
+    //[SerializeField] private float groundCheckRadius;
+    //[SerializeField] private LayerMask groundCheckLayers;
     // Start is called before the first frame update
     void Start()
     {
@@ -37,30 +37,30 @@ public class Player : MonoBehaviour
     {
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
 
-        anim.SetFloat("Speed", Mathf.Abs(horizontalMove));
+        //anim.SetFloat("Speed", Mathf.Abs(horizontalMove));
 
         if (Input.GetButtonDown("Jump"))
         {
             jump = true;
-            anim.SetBool("IsJumping", true);
+            //anim.SetBool("IsJumping", true);
         }
 
         if (Input.GetButtonDown("Crouch"))
         {
             crouch = true;
-            anim.SetBool("IsCrouching", true);
+            //anim.SetBool("IsCrouching", true);
         }
         else if (Input.GetButtonUp("Crouch"))
         {
             crouch = false;
-            anim.SetBool("IsCrouching", false);
+            //anim.SetBool("IsCrouching", false);
         }
 
     }
 
     public void OnLanding()
     {
-        anim.SetBool("IsJumping", false);
+        //anim.SetBool("IsJumping", false);
     }
 
     // Update is called at fixed intevalls
@@ -76,14 +76,14 @@ public class Player : MonoBehaviour
                 //audiosource.Play();
             }*/
         } 
-        else //if(moveInput == 0)
+        /*else if(moveInput == 0)
         {
             //audiosource.Stop();
-        }
-        if (GroundCheck() == false)
+        }*/
+        /*if (GroundCheck() == false)
         {    
             //audiosource.Stop();
-        }
+        }*/
 
     }
 
@@ -112,10 +112,10 @@ public class Player : MonoBehaviour
         health = 100;
     }
     
-    public bool GroundCheck()
+    /*public bool GroundCheck()
     {
         return Physics2D.OverlapCircle(groundCheckTransform.position, groundCheckRadius, groundCheckLayers);
-    }
+    }*/
     
 
 }
