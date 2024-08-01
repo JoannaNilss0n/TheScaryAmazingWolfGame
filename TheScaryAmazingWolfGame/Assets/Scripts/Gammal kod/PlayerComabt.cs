@@ -11,9 +11,9 @@ public class PlayerCombat : MonoBehaviour
     [SerializeField] private float attackRate = 2;
     float nextAttackTime = 0;
 
-    [SerializeField]private Animator anim;
+    //[SerializeField]private Animator anim;
 
-    public AudioSource audiosource;
+    //public AudioSource audiosource;
 
 
     void Start()
@@ -33,10 +33,10 @@ public class PlayerCombat : MonoBehaviour
                 //Debug.Log("Attack");
 
                 // attack audio:
-                if(!audiosource.isPlaying)
+                /*if(!audiosource.isPlaying)
                 {
                     audiosource.Play();
-                }
+                }*/
             } 
         } 
 
