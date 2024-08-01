@@ -26,7 +26,7 @@ public class PlayerCombat : MonoBehaviour
     {
         if (Time.time >= nextAttackTime)
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Return))
             {
                 Attack();
                 nextAttackTime = Time.time + 1 / attackRate;
@@ -47,7 +47,7 @@ public class PlayerCombat : MonoBehaviour
     public void Attack()
     {
         // Attack animation
-        anim.SetTrigger("Attack");
+        //anim.SetTrigger("Attack");
         // upptack fiender
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
         // Skada fiender

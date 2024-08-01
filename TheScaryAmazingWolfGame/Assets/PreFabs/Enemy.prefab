@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 1775268820030291768}
   - component: {fileID: 7089355642802587316}
   - component: {fileID: 7469202811691471121}
-  m_Layer: 0
+  - component: {fileID: 1459623180337479644}
+  m_Layer: 7
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -154,6 +155,23 @@ MonoBehaviour:
   tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   graphMask:
     value: -1
+--- !u!114 &1459623180337479644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 469265014802276542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22e6c29e32504465faa943c537d8029b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1
+  targets:
+  - {fileID: 0}
+  - {fileID: 0}
+  delay: 0
 --- !u!1 &497610727856882404
 GameObject:
   m_ObjectHideFlags: 0
@@ -164,7 +182,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4101579515741503466}
   - component: {fileID: 2118715268673901413}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -247,7 +265,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3634562197234557129}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: EnemyGFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -281,7 +299,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1039113896058723334}
   - component: {fileID: 3139469690702104213}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
