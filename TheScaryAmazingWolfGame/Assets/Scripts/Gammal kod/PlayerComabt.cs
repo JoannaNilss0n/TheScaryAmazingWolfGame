@@ -11,9 +11,9 @@ public class PlayerCombat : MonoBehaviour
     [SerializeField] private float attackRate = 2;
     float nextAttackTime = 0;
 
-    [SerializeField]private Animator anim;
+    //[SerializeField]private Animator anim;
 
-    public AudioSource audiosource;
+    //public AudioSource audiosource;
 
 
     void Start()
@@ -26,17 +26,17 @@ public class PlayerCombat : MonoBehaviour
     {
         if (Time.time >= nextAttackTime)
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Return))
             {
                 Attack();
                 nextAttackTime = Time.time + 1 / attackRate;
                 //Debug.Log("Attack");
 
                 // attack audio:
-                if(!audiosource.isPlaying)
+                /*if(!audiosource.isPlaying)
                 {
                     audiosource.Play();
-                }
+                }*/
             } 
         } 
 
@@ -47,7 +47,7 @@ public class PlayerCombat : MonoBehaviour
     public void Attack()
     {
         // Attack animation
-        anim.SetTrigger("Attack");
+        //anim.SetTrigger("Attack");
         // upptack fiender
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
         // Skada fiender

@@ -8,6 +8,11 @@ public class Enemy : MonoBehaviour
     [SerializeField] private int maxHealth = 100;
     int curentHealth;
 
+    //[Header("Patrolling")]
+    //[SerializeField] private gameObject A;
+    //[SerializeField] private gameObject B;
+    //private transform curentPoint;
+
     [Header("Pathfinding")]
     [SerializeField] private Transform target;
     [SerializeField] private float activateDistance = 50f;
@@ -39,6 +44,8 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         curentHealth = maxHealth;
+
+        //curentPoint = B.transform;
 
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
