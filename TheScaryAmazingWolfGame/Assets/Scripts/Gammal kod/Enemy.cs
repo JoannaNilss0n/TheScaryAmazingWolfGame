@@ -8,10 +8,10 @@ public class Enemy : MonoBehaviour
     [SerializeField] private int maxHealth = 100;
     int curentHealth;
 
-    //[Header("Patrolling")]
-    //[SerializeField] private gameObject A;
-    //[SerializeField] private gameObject B;
-    //private transform curentPoint;
+    [Header("Patrolling")]
+    [SerializeField] private GameObject A;
+    [SerializeField] private GameObject B;
+    private Transform curentPoint;
 
     [Header("Pathfinding")]
     [SerializeField] private Transform target;
@@ -45,7 +45,7 @@ public class Enemy : MonoBehaviour
     {
         curentHealth = maxHealth;
 
-        //curentPoint = B.transform;
+        curentPoint = B.transform;
 
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
@@ -66,8 +66,36 @@ public class Enemy : MonoBehaviour
     {
         if (TargetInDistance() && followEnabled)
         {
+            Debug.Log("1");
             PathFollow();
         }
+        else
+        {
+            Debug.Log("2");
+
+            Vector2 point = curentPoint.position - transform.position;
+            if (curentPoint == B.transform)
+            {
+                rb.velocity = new Vector2(speed, 0);
+            }
+            else
+            {
+                rb.velocity = new Vector2(-speed, 0);
+            }
+
+            if (Vector2.Distance(transform.position, curentPoint.position) < 0.5f && curentPoint == B.transform)
+            {
+                
+                curentPoint = A.transform;
+            }
+
+            if (Vector2.Distance(transform.position, curentPoint.position) < 0.5f && curentPoint == A.transform)
+            {
+                curentPoint = B.transform;
+            }
+        }
+
+        
     }
 
     private void UpdatePath()
@@ -76,6 +104,13 @@ public class Enemy : MonoBehaviour
         {
             seeker.StartPath(rb.position, target.position, OnPathComplete);
         }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(A.transform.position, 0.5f);
+        Gizmos.DrawWireSphere(B.transform.position, 0.5f);
+        Gizmos.DrawLine(A.transform.position, B.transform.position);
     }
 
     private void PathFollow()
