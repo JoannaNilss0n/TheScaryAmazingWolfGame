@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding;
 
-public class Enemy : MonoBehaviour
+public class EnemyAstar : MonoBehaviour
 {
     [SerializeField] private int maxHealth = 100;
     int curentHealth;
@@ -65,12 +65,12 @@ public class Enemy : MonoBehaviour
 
      private void FixedUpdate()
     {
-        /*if (TargetInDistance() && followEnabled)
+        if (TargetInDistance() && followEnabled)
         {
             speed = 9;
             PathFollow();
-        }*/
-        if (TargetInDistance())
+        }
+        /*if (TargetInDistance())
         {
             if (transform.position.x < target.position.x)
             {
@@ -82,9 +82,9 @@ public class Enemy : MonoBehaviour
                 rb.velocity = new Vector2(-speed, 0);
                 transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x)*-1f, transform.localScale.y, transform.localScale.z);
             }
-            speed = 9;
+
             PathFollow();
-        }
+        }*/
         else
         {
             speed = 2;
@@ -160,8 +160,8 @@ public class Enemy : MonoBehaviour
             {
                 if (isInAir) return; 
                 isJumping = true;
-                //rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-                rb.AddForce(Vector3.up*jumpForce*100);
+                rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+                //rb.AddForce(Vector3.up*jumpForce*100);
                 StartCoroutine(JumpCoolDown());
 
             }

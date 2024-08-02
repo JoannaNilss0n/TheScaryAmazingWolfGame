@@ -1239,15 +1239,19 @@ PrefabInstance:
       objectReference: {fileID: 551692009}
     - target: {fileID: 7165483998204673659, guid: 60792a387580f204aadd1e8486b21953, type: 3}
       propertyPath: jumpForce
-      value: 15
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 7165483998204673659, guid: 60792a387580f204aadd1e8486b21953, type: 3}
       propertyPath: nextWaypointDistance
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7165483998204673659, guid: 60792a387580f204aadd1e8486b21953, type: 3}
+      propertyPath: groundLayerMask.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 7165483998204673659, guid: 60792a387580f204aadd1e8486b21953, type: 3}
       propertyPath: jumpNodeHeightRequirement
-      value: 0.6
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1265,6 +1269,10 @@ PrefabInstance:
     - target: {fileID: 1662901935966597979, guid: 0e648ae55298d314f97fd0a6d2f95ef5, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 2226262295736663727, guid: 0e648ae55298d314f97fd0a6d2f95ef5, type: 3}
+      propertyPath: m_JumpForce
+      value: 700
       objectReference: {fileID: 0}
     - target: {fileID: 6073852198842978547, guid: 0e648ae55298d314f97fd0a6d2f95ef5, type: 3}
       propertyPath: m_CollisionDetection
