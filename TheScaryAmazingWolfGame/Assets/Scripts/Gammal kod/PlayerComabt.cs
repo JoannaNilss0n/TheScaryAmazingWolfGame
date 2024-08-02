@@ -53,8 +53,17 @@ public class PlayerCombat : MonoBehaviour
         // Skada fiender
         foreach(Collider2D enemy in hitEnemies)
         {
+           
+            enemy.GetComponent<BreakableObjectScript>().TakeDamage(attackDamage);
+        }
+        Collider2D[] hitEnemies2 = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
+        // Skada fiender
+        foreach (Collider2D enemy in hitEnemies2)
+        {
+
             enemy.GetComponent<Enemy>().TakeDamage(attackDamage);
         }
+
 
 
     }
