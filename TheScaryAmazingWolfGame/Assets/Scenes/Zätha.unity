@@ -184,12 +184,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   data:
-    dataString: UEsDBBQAAAgIAAAIIewxO93edwIAAC8FAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVEtzmzAQ/isenesMdvyA3lriOD0k8dTt5MJFRovRWEiMHrGdjP97VwIMcbkg9vHtft+u+CRcmhpyq/Rac/asGJDvI+LP5Nuodz7Bie6V3PIP6GLeOLOlD6Ih5je1XKF94tOMqsBqnv+Qe+GDIzQ6yQulqxXbQ6qMNWguqDCALq2sz5Zo+hyRE77GiU8542m69KcPPCXR6ILHHKQF3YdOkrtZgk88aTOiu3nkn3mbF98ls2g5m8zi1TiKA4aTuaBVDcwT6qEWSQsxuQ9hEqm2ER48V0Jw0/ZJ7LkOOqS0Ng5ZYgDjFHmH5nx8CXxfWs9hmPxaFAZsK4qm5weuUb4GlfxUjaYVNYemr3cqnK8TN+wbzOf/3ONJcBdaVU9d2UnkS9iS54ff9JxTYweaD80PX/t28kjFge4EvJUgX9RaKycZOq12PtUZmD70n1dmaQn5obc3rd4YXd3L3Y24G7DncAnkT6ng1S7MctYYtkIFucNegMbB/MKGw9aYFgKtvou/Bv7Q/XC9Wscj18aiq2UpfXs75bQPJaugmWfjbKq0hGBum65BUmHPG4SxtxO88Q3K3ngeqb9IbfHW192Pm5Rg7uOj6Ma1UcfrsEypjs9gyldnBZfQN+0dL6hTqqRsFmyoSZe2dbqg+SBt7zj7uloEkmiJV2q5m1KI57PFmDI2zaP54n5xn8QQFSTsHpfIk4pN02grD05N9uAS96z7v4zWmtZh2ZmmxzX/qNRAci4Ltc01gHxtEK6Ng8YieCnZinEUaAvWchnmTT4zIlR+AJZdgbLAdHWymmY9SkZq/q6st2QkDT+UjHjzdZc3Gt45HH3xDuxCLv8AUEsDBBQAAAgIAAAIIexzj7lvbQAAAHgAAAAJACQAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0Bq1YqSy0qzszPU7JSMNEz0jM011FQSi9KLMgoBooYgjilmSkgdrRSqqWBuamBgXmSUWKqhamJmW5iSopRsoGpmbGZsaVFqkGaUixQfUllQapfYm4qRE9AYklGWmZeSmZeup57UWaKO8hopdhaAFBLAQItABQAAAgIAAAIIewxO93edwIAAC8FAAALACQAAAAAAAAAAAAAAAAAAABncmFwaDAuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAAAIIexzj7lvbQAAAHgAAAAJACQAAAAAAAAAAAAAAMQCAABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwUGAAAAAAIAAgC4AAAAfAMAAAAA
+    dataString: UEsDBBQAAAgIAAAIIewU43LfegIAADIFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVE1zmzAQ/SsenWsP+BN6a4nj9JDEE7eTCxcZLUZjITGSiO1k/N+7EmCoywXxdvft7tsVX4RLU0Fmld5ozp4VA/J9RNyZfBv1xic404OSO/4Jnc87Z7ZwTtT7vFHLFeKhCzOqBKt59kMehHMOEKwlz5Uu1+wAiTLWIJxTYQBNWlkXLRH6GpEzvsaxC7ngabpyp088xcHoiscMpAXdu4bxZB7jE4VtRDBZBO5ZtHHRJJ4Hq3k4j9bjIPIctcwELStgrqGeahm3FOHMu0lstfVw5JkSgpu2TmIvldchoZWpsUt0YJxi3764YLKKECmAHwrr2hjGv+a5AdvqounlgWtUsCEmP1Uja0nNsSntg4rapYoaARrO5//M49Cbc63Kpy5tGLgUtuDZ8Y1eMmrsQPYh/NCXHnqBTlQc6V7AewHyRW20qiVDo9W1C60NTB/6z1tnSQHZscebUu/AuuoV76bczdj1cPXNnxPBy71Xct4AO6G84n41QONsfmHBfnFMS4Goq+KPgd/0MNyw1vDItbFoaruUrry9qrVzJWuvmeumtonSEjzcFl2BpMJetkhj7yd4ZxukvbM8UneX2uStrbsidyEe7v2D4M60VafbsEyhTs9gitfaCi6hL9oZXlCnREnZLNhQky5sV+ucZoOwQ83Zv6tFIA5WeKtW+ymFaDFfjilj0yxYLGfLWRxBkBO/e1xin1Rsm0JbeXBqsieXuGfdL2a00bTyy840PW34Z6kGknOZq12mAeRrw3ArHDQmwXvJ1oyjQDuwlks/b/KVEqGyI7D0RpT6Ttdnq2nas6Sk4h/KOiQlif+npMTBt13eavjgcHLJO7Iruf4FUEsDBBQAAAgIAAAIIexzj7lvbQAAAHgAAAAJACQAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0Bq1YqSy0qzszPU7JSMNEz0jM011FQSi9KLMgoBooYgjilmSkgdrRSqqWBuamBgXmSUWKqhamJmW5iSopRsoGpmbGZsaVFqkGaUixQfUllQapfYm4qRE9AYklGWmZeSmZeup57UWaKO8hopdhaAFBLAQItABQAAAgIAAAIIewU43LfegIAADIFAAALACQAAAAAAAAAAAAAAAAAAABncmFwaDAuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAAAIIexzj7lvbQAAAHgAAAAJACQAAAAAAAAAAAAAAMcCAABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwUGAAAAAAIAAgC4AAAAfwMAAAAA
     upgradeData: 
     file_cachedStartup: {fileID: 0}
     data_cachedStartup: 
     cacheStartup: 0
-  showNavGraphs: 0
+  showNavGraphs: 1
   showUnwalkableNodes: 1
   debugMode: 0
   debugFloor: 0
@@ -661,7 +661,7 @@ Transform:
   m_GameObject: {fileID: 1235497865}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.5, y: -4.61, z: 0}
+  m_LocalPosition: {x: -5.02, y: -4.61, z: 0}
   m_LocalScale: {x: 1.8005568, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -694,7 +694,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1308832583}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 06e24a37fc37c544bb1d6a3bbd80186c, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -791,7 +791,7 @@ Transform:
   m_GameObject: {fileID: 1308832583}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.7966, y: -0.46, z: 0}
+  m_LocalPosition: {x: -11.42, y: -0.46, z: 0}
   m_LocalScale: {x: 6.4535418, y: 0.7448, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -921,7 +921,7 @@ Transform:
   m_GameObject: {fileID: 1419653565}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.51, y: -2.5, z: 0}
+  m_LocalPosition: {x: -6.99, y: -2.5, z: 0}
   m_LocalScale: {x: 1.8005568, y: 0.7448, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1173,6 +1173,14 @@ PrefabInstance:
       propertyPath: targets.Array.data[1]
       value: 
       objectReference: {fileID: 1517750554}
+    - target: {fileID: 1775268820030291768, guid: 60792a387580f204aadd1e8486b21953, type: 3}
+      propertyPath: m_GravityScale
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1775268820030291768, guid: 60792a387580f204aadd1e8486b21953, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5316117479481427797, guid: 60792a387580f204aadd1e8486b21953, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.05
@@ -1230,8 +1238,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 551692009}
     - target: {fileID: 7165483998204673659, guid: 60792a387580f204aadd1e8486b21953, type: 3}
+      propertyPath: jumpForce
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7165483998204673659, guid: 60792a387580f204aadd1e8486b21953, type: 3}
       propertyPath: nextWaypointDistance
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7165483998204673659, guid: 60792a387580f204aadd1e8486b21953, type: 3}
+      propertyPath: jumpNodeHeightRequirement
+      value: 0.6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1249,6 +1265,10 @@ PrefabInstance:
     - target: {fileID: 1662901935966597979, guid: 0e648ae55298d314f97fd0a6d2f95ef5, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6073852198842978547, guid: 0e648ae55298d314f97fd0a6d2f95ef5, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7204082101346046076, guid: 0e648ae55298d314f97fd0a6d2f95ef5, type: 3}
       propertyPath: m_LocalPosition.x

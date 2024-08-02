@@ -21,7 +21,7 @@ public class Enemy : MonoBehaviour
     [Header("Physics")]
     [SerializeField] private float speed = 200f, jumpForce = 100f;
     [SerializeField] private float nextWaypointDistance = 3f;
-    [SerializeField] private float jumpNodeHeightRequirement = 0.8f;
+    [SerializeField] private float jumpNodeHeightRequirement = 0.6f;
     [SerializeField] private float jumpModifier = 0.3f;
     [SerializeField] private float jumpCheckOffset = 0.1f;
 
@@ -67,14 +67,16 @@ public class Enemy : MonoBehaviour
         if (TargetInDistance() && followEnabled)
         {
             Debug.Log("1");
+            speed = 9;
             PathFollow();
         }
         else
         {
             Debug.Log("2");
+            speed = 2;
 
             Vector2 point = curentPoint.position - transform.position;
-            if (curentPoint == B.transform)
+            if (curentPoint.position.x >= B.transform.position.x)
             {
                 rb.velocity = new Vector2(speed, 0);
             }
@@ -83,13 +85,13 @@ public class Enemy : MonoBehaviour
                 rb.velocity = new Vector2(-speed, 0);
             }
 
-            if (Vector2.Distance(transform.position, curentPoint.position) < 0.5f && curentPoint == B.transform)
+            if (Vector2.Distance(transform.position, curentPoint.position) < 0.5f && curentPoint.position.x >= B.transform.position.x)
             {
                 
                 curentPoint = A.transform;
             }
 
-            if (Vector2.Distance(transform.position, curentPoint.position) < 0.5f && curentPoint == A.transform)
+            if (Vector2.Distance(transform.position, curentPoint.position) < 0.5f && curentPoint.position.x <= A.transform.position.x)
             {
                 curentPoint = B.transform;
             }
