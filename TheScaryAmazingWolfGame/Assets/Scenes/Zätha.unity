@@ -407,6 +407,45 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1009288749 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 469265014802276542, guid: 60792a387580f204aadd1e8486b21953, type: 3}
+  m_PrefabInstance: {fileID: 5399371693374342646}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1009288756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1009288749}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25aef4b25174e914b8d38bfd5617ed4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  A: {fileID: 143401350}
+  B: {fileID: 1517750553}
+  curentPoint: {fileID: 0}
+  target: {fileID: 551692009}
+  activateDistance: 7
+  pathUpdateSeconds: 0.5
+  speed: 9
+  jumpForce: 15
+  nextWaypointDistance: 3
+  jumpNodeHeightRequirement: 0.6
+  jumpModifier: 0.3
+  jumpCheckOffset: 0.1
+  followEnabled: 1
+  jumpEnabled: 1
+  isJumping: 0
+  isInAir: 0
+  directionLookEnabled: 1
+  startOffset: {x: 0, y: 0, z: 0}
+  groundLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &1133653262
 GameObject:
   m_ObjectHideFlags: 0
@@ -1162,6 +1201,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1459623180337479644, guid: 60792a387580f204aadd1e8486b21953, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1459623180337479644, guid: 60792a387580f204aadd1e8486b21953, type: 3}
       propertyPath: targets.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -1239,7 +1282,15 @@ PrefabInstance:
       objectReference: {fileID: 551692009}
     - target: {fileID: 7165483998204673659, guid: 60792a387580f204aadd1e8486b21953, type: 3}
       propertyPath: jumpForce
-      value: 17
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 7165483998204673659, guid: 60792a387580f204aadd1e8486b21953, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7165483998204673659, guid: 60792a387580f204aadd1e8486b21953, type: 3}
+      propertyPath: pathUpdateSeconds
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7165483998204673659, guid: 60792a387580f204aadd1e8486b21953, type: 3}
       propertyPath: nextWaypointDistance
@@ -1253,10 +1304,15 @@ PrefabInstance:
       propertyPath: jumpNodeHeightRequirement
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1459623180337479644, guid: 60792a387580f204aadd1e8486b21953, type: 3}
+    - {fileID: 7469202811691471121, guid: 60792a387580f204aadd1e8486b21953, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 469265014802276542, guid: 60792a387580f204aadd1e8486b21953, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1009288756}
   m_SourcePrefab: {fileID: 100100000, guid: 60792a387580f204aadd1e8486b21953, type: 3}
 --- !u!1001 &7666145564080108400
 PrefabInstance:
