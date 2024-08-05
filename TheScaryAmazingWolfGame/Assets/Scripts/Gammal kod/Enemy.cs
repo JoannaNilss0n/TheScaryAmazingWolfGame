@@ -7,6 +7,8 @@ public class Enemy : MonoBehaviour
 {
     [SerializeField] private int maxHealth = 100;
     int curentHealth;
+    [SerializeField] private Vector2 ChasePoint;
+
 
     [Header("Patrolling")]
     [SerializeField] private GameObject A;
@@ -46,6 +48,8 @@ public class Enemy : MonoBehaviour
     {
         curentHealth = maxHealth;
 
+        ChasePoint = transform.position;
+
         curentPoint = B.transform;
 
         seeker = GetComponent<Seeker>();
@@ -61,6 +65,18 @@ public class Enemy : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void Sandwich()
+    {
+        FlytaVargen();
+    }
+
+    private void FlytaVargen()
+    {
+        transform.position = ChasePoint;
+        activateDistance = 100;
+        speed = 9;
     }
 
      private void FixedUpdate()
