@@ -3,12 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding;
 
-public class Enemy : MonoBehaviour
+public class EnemyAstar : MonoBehaviour
 {
     [SerializeField] private int maxHealth = 100;
     int curentHealth;
-    [SerializeField] private Vector2 ChasePoint;
-
 
     [Header("Patrolling")]
     [SerializeField] private GameObject A;
@@ -48,8 +46,6 @@ public class Enemy : MonoBehaviour
     {
         curentHealth = maxHealth;
 
-        ChasePoint = transform.position;
-
         curentPoint = B.transform;
 
         seeker = GetComponent<Seeker>();
@@ -67,69 +63,41 @@ public class Enemy : MonoBehaviour
         
     }
 
-    public void Sandwich()
-    {
-        FlytaVargen();
-    }
-
-    private void FlytaVargen()
-    {
-        transform.position = ChasePoint;
-        activateDistance = 100;
-        speed = 9;
-    }
-
      private void FixedUpdate()
     {
-        startOffset = transform.position - new Vector3(0f, GetComponent<Collider2D>().bounds.extents.y + jumpCheckOffset, transform.position.z);
-        isGrounded = Physics2D.Raycast(startOffset, -Vector3.up, 0.05f);
-
-        // Jump
-        if (jumpEnabled && isGrounded && !isInAir && !isOnCoolDown)
+        if (TargetInDistance() && followEnabled)
         {
-            if (JumpCheck())
-            {
-                if (isInAir) return; 
-                isJumping = true;
-                //rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-                rb.AddForce(Vector3.up*jumpForce*10);
-                StartCoroutine(JumpCoolDown());
-
-            }
+            speed = 9;
+            PathFollow();
         }
-        if (isGrounded)
-        {
-            isJumping = false;
-            isInAir = false; 
-        }
-        else
-        {
-            isInAir = true;
-        }
-
-        if (TargetInDistance())
+        /*if (TargetInDistance())
         {
             if (transform.position.x < target.position.x)
             {
-                rb.velocity = new Vector2(speed, rb.velocity.y);
+                rb.velocity = new Vector2(speed, 0);
+                transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
             }
             else
             {
-                rb.velocity = new Vector2(-speed, rb.velocity.y);
+                rb.velocity = new Vector2(-speed, 0);
+                transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x)*-1f, transform.localScale.y, transform.localScale.z);
             }
-            speed = 9;
-        }
+
+            PathFollow();
+        }*/
         else
         {
             speed = 2;
 
+            //Vector2 point = curentPoint.position - transform.position;
+
             if (curentPoint == B.transform)
             {
-                rb.velocity = new Vector2(speed, rb.velocity.y);
+                rb.velocity = new Vector2(speed, 0);
             }
             else
             {
-                rb.velocity = new Vector2(-speed, rb.velocity.y);
+                rb.velocity = new Vector2(-speed, 0);
             }
 
             if (Vector2.Distance(transform.position, curentPoint.position) < 0.5f || transform.position.x >= B.transform.position.x)
@@ -141,18 +109,6 @@ public class Enemy : MonoBehaviour
             if (Vector2.Distance(transform.position, curentPoint.position) < 0.5f || transform.position.x <= A.transform.position.x)
             {
                 curentPoint = B.transform;
-            }
-        }
-
-        if (directionLookEnabled)
-        {
-            if (rb.velocity.x > 0.05f)
-            {
-                transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
-            }
-            else if (rb.velocity.x < -0.05f)
-            {
-                transform.localScale = new Vector3(-1f * Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
             }
         }
 
@@ -172,9 +128,78 @@ public class Enemy : MonoBehaviour
         Gizmos.DrawWireSphere(A.transform.position, 0.5f);
         Gizmos.DrawWireSphere(B.transform.position, 0.5f);
         Gizmos.DrawLine(A.transform.position, B.transform.position);
-        Gizmos.DrawLine(startOffset + new Vector3(0f, 0.2f, 0f), startOffset + new Vector3(0f, 0.2f, 0f) + Vector3.right*transform.localScale.x);
+        Gizmos.DrawLine(startOffset + (new Vector3(0f, 0.2f, 0f)), startOffset + (new Vector3(0f, 0.2f, 0f)) + Vector3.right*transform.localScale.x);
         Gizmos.DrawWireSphere(transform.position, activateDistance);
     }
+
+    private void PathFollow()
+    {
+        if (path == null)
+        {
+            return;
+        }
+
+        // Reached end of path
+        if (currentWaypoint >= path.vectorPath.Count)
+        {
+            return;
+        }
+
+        // See if colliding with anything
+        startOffset = transform.position - new Vector3(0f, GetComponent<Collider2D>().bounds.extents.y + jumpCheckOffset, transform.position.z);
+        isGrounded = Physics2D.Raycast(startOffset, -Vector3.up, 0.05f);
+
+        // Direction Calculation
+        Vector2 direction = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
+        Vector2 force = direction * speed;
+
+        // Jump
+        if (jumpEnabled && isGrounded && !isInAir && !isOnCoolDown)
+        {
+            if (direction.y > jumpNodeHeightRequirement || JumpCheck())
+            {
+                if (isInAir) return; 
+                isJumping = true;
+                rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+                //rb.AddForce(Vector3.up*jumpForce*100);
+                StartCoroutine(JumpCoolDown());
+
+            }
+        }
+        if (isGrounded)
+        {
+            isJumping = false;
+            isInAir = false; 
+        }
+        else
+        {
+            isInAir = true;
+        }
+
+        // Movement
+        rb.velocity = new Vector2(force.x, rb.velocity.y);
+
+        // Next Waypoint
+        float distance = Vector2.Distance(rb.position, path.vectorPath[currentWaypoint]);
+        if (distance < nextWaypointDistance)
+        {
+            currentWaypoint++;
+        }
+
+        // Direction Graphics Handling
+        if (directionLookEnabled)
+        {
+            if (rb.velocity.x > 0.05f)
+            {
+                transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+            }
+            else if (rb.velocity.x < -0.05f)
+            {
+                transform.localScale = new Vector3(-1f * Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+            }
+        }
+    }
+
 
     private bool TargetInDistance()
     {

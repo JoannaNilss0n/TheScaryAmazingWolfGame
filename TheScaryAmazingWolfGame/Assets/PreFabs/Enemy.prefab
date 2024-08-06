@@ -12,8 +12,7 @@ GameObject:
   - component: {fileID: 7165483998204673659}
   - component: {fileID: 1775268820030291768}
   - component: {fileID: 7089355642802587316}
-  - component: {fileID: 7469202811691471121}
-  - component: {fileID: 1459623180337479644}
+  - component: {fileID: 8086603928864179626}
   m_Layer: 7
   m_Name: Enemy
   m_TagString: Untagged
@@ -50,13 +49,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
+  A: {fileID: 0}
+  B: {fileID: 0}
+  curentPoint: {fileID: 0}
   target: {fileID: 0}
   activateDistance: 7
   pathUpdateSeconds: 0.5
-  speed: 9
-  jumpForce: 5
-  nextWaypointDistance: 3
-  jumpNodeHeightRequirement: 0.8
+  speed: 2
+  jumpForce: 70
+  nextWaypointDistance: 1
+  jumpNodeHeightRequirement: 1
   jumpModifier: 0.3
   jumpCheckOffset: 0.1
   followEnabled: 1
@@ -65,6 +67,9 @@ MonoBehaviour:
   isInAir: 0
   directionLookEnabled: 1
   startOffset: {x: 0, y: 0, z: 0}
+  groundLayerMask:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!50 &1775268820030291768
 Rigidbody2D:
   serializedVersion: 4
@@ -80,7 +85,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 10
   m_Material: {fileID: 6200000, guid: a50fc9effd7d1d94c9cbf169955b2a13, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
@@ -90,7 +95,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!70 &7089355642802587316
 CapsuleCollider2D:
@@ -127,51 +132,40 @@ CapsuleCollider2D:
   m_Offset: {x: -0.020292759, y: -0.010146618}
   m_Size: {x: 0.9870355, y: 1.953774}
   m_Direction: 0
---- !u!114 &7469202811691471121
+--- !u!114 &8086603928864179626
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 469265014802276542}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 373b52eb9bf8c40f785bb6947a1aee66, type: 3}
+  m_Script: {fileID: 11500000, guid: 25aef4b25174e914b8d38bfd5617ed4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  version: 1
-  drawGizmos: 1
-  detailedGizmos: 0
-  startEndModifier:
-    addPoints: 0
-    exactStartPoint: 3
-    exactEndPoint: 3
-    useRaycasting: 0
-    mask:
-      serializedVersion: 2
-      m_Bits: 4294967295
-    useGraphRaycasting: 0
-  traversableTags: -1
-  tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-  graphMask:
-    value: -1
---- !u!114 &1459623180337479644
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 469265014802276542}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22e6c29e32504465faa943c537d8029b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  version: 1
-  targets:
-  - {fileID: 0}
-  - {fileID: 0}
-  delay: 0
+  maxHealth: 100
+  A: {fileID: 0}
+  B: {fileID: 0}
+  curentPoint: {fileID: 0}
+  target: {fileID: 0}
+  activateDistance: 7
+  pathUpdateSeconds: 0.5
+  speed: 9
+  jumpForce: 15
+  nextWaypointDistance: 3
+  jumpNodeHeightRequirement: 0.6
+  jumpModifier: 0.3
+  jumpCheckOffset: 0.1
+  followEnabled: 1
+  jumpEnabled: 1
+  isJumping: 0
+  isInAir: 0
+  directionLookEnabled: 1
+  startOffset: {x: 0, y: 0, z: 0}
+  groundLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &497610727856882404
 GameObject:
   m_ObjectHideFlags: 0

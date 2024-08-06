@@ -9,10 +9,16 @@ public class Coin : MonoBehaviour
         if ( collision.gameObject.CompareTag("Player"))
         {
             Player player = collision.gameObject.GetComponent<Player>();
+            Enemy enemy = collision.gameObject.GetComponent<Enemy>();
             player.AddMoney(1);
             
+            enemy.Sandwich();
             //Förstör myntet när spelaren har samlat det
             Destroy(gameObject);
+        }
+        else
+        {
+            return;
         }
         
         // gameObject: inbygd funktion, refererar till gameobject:et som klassen ligger i
