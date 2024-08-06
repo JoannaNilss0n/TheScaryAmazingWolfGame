@@ -69,15 +69,18 @@ public class Enemy : MonoBehaviour
 
     public void Sandwich()
     {
-        FlytaVargen();
-    }
-
-    private void FlytaVargen()
-    {
+        //FlytaVargen();
         transform.position = ChasePoint;
         activateDistance = 100;
         speed = 9;
     }
+
+    /*private void FlytaVargen()
+    {
+        transform.position = ChasePoint;
+        activateDistance = 100;
+        speed = 9;
+    }*/
 
      private void FixedUpdate()
     {
@@ -159,13 +162,13 @@ public class Enemy : MonoBehaviour
         
     }
 
-    private void UpdatePath()
+    /*private void UpdatePath()
     {
         if (followEnabled && TargetInDistance() && seeker.IsDone())
         {
             seeker.StartPath(rb.position, target.position, OnPathComplete);
         }
-    }
+    }*/
 
     private void OnDrawGizmos()
     {
