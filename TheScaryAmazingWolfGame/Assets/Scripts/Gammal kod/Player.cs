@@ -28,7 +28,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         rb2D = GetComponent<Rigidbody2D>(); //hämtar spelarens rigidbody
-        controller = GetComponent<CharacterController2D>(); //hätar lite stulen kod som gör att karaktären kan gå
+        controller = GetComponent<CharacterController2D>(); //hämtar lite stulen kod som gör att karaktären kan gå
         //audiosource = GetComponent<AudioSource>(); //hämtar audio
         reSpawnPoint = transform.position;
     }
@@ -41,6 +41,7 @@ public class Player : MonoBehaviour
 
         if (Input.GetButtonDown("Jump"))
         {
+            Debug.Log(horizontalMove);
             jump = true;
             //anim.SetBool("IsJumping", true);
         }
