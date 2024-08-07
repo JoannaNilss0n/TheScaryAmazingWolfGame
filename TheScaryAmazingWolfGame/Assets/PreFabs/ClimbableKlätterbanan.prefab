@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1393270948688456139}
   - component: {fileID: 16329738117219845}
   m_Layer: 0
-  m_Name: ClimbableObject
+  m_Name: "ClimbableKl\xE4tterbanan"
   m_TagString: Climbable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
-  m_Color: {r: 0.73058796, g: 0.96981126, b: 0.26898536, a: 1}
+  m_Color: {r: 0.87223864, g: 0.96862745, b: 0.27058825, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
