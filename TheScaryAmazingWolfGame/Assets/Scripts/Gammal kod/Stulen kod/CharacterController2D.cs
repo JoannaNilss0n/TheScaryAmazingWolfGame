@@ -117,6 +117,7 @@ public class CharacterController2D : MonoBehaviour
 			// And then smoothing it out and applying it to the character
 			//m_Rigidbody2D.velocity = Vector3.SmoothDamp(m_Rigidbody2D.velocity, targetVelocity, ref m_Velocity, m_MovementSmoothing);
 
+			// Movement fast halt:
 			if (m_Rigidbody2D.velocity.x <= move || m_Rigidbody2D.velocity.x >= move)
 			{
 				m_Rigidbody2D.velocity = new Vector2(m_Rigidbody2D.velocity.x + move/10, m_Rigidbody2D.velocity.y);
