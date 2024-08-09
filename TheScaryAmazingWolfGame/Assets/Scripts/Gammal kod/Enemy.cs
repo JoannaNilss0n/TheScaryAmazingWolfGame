@@ -225,4 +225,24 @@ public class Enemy : MonoBehaviour
     {
         return Physics2D.Raycast(startOffset + (new Vector3(0f, 0.2f, 0f)), Vector2.right*transform.localScale.x, 0.5f, groundLayerMask);
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if ( collision.gameObject.CompareTag("Player"))
+        {
+            Player player = collision.gameObject.GetComponent<Player>();
+            Enemy enemy = GameObject.FindGameObjectWithTag("Enemy").gameObject.GetComponent<Enemy>();
+
+            player.TakeDamge(1000);
+        }
+        
+        // gameObject: inbygd funktion, refererar till gameobject:et som klassen ligger i
+        // HÄR: gameObject = coin
+    }
+
+    public void FlyTrap()
+    {
+        activateDistance = 100;
+        speed = 9;
+    }
 }

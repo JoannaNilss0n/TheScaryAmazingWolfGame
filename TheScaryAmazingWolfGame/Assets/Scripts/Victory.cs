@@ -1,20 +1,22 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class Coin : MonoBehaviour
+public class Victory : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if ( collision.gameObject.CompareTag("Player"))
         {
             Player player = collision.gameObject.GetComponent<Player>();
-            Enemy enemy = GameObject.FindGameObjectWithTag("Enemy").gameObject.GetComponent<Enemy>();
-
-            player.AddMoney(1);
             
-            if (enemy != null) enemy.Sandwich();
+
+            player.Victory();
+            
+            
 
             //Förstör myntet när spelaren har samlat det
-            Destroy(gameObject);
+            
         }
         
         // gameObject: inbygd funktion, refererar till gameobject:et som klassen ligger i

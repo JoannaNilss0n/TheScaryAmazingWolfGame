@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {   
@@ -109,8 +110,15 @@ public class Player : MonoBehaviour
 
     public void die()
     {
-        transform.position = reSpawnPoint;
-        health = 100;
+        SceneManager.LoadScene(0);
+    }
+
+    public void Victory()
+    {
+        if (money >= 1)
+        {
+            SceneManager.LoadScene(0);
+        }
     }
     
     /*public bool GroundCheck()

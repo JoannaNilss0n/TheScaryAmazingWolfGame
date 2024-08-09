@@ -1,6 +1,8 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class Coin : MonoBehaviour
+public class FlyTrap : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -8,13 +10,8 @@ public class Coin : MonoBehaviour
         {
             Player player = collision.gameObject.GetComponent<Player>();
             Enemy enemy = GameObject.FindGameObjectWithTag("Enemy").gameObject.GetComponent<Enemy>();
-
-            player.AddMoney(1);
             
-            if (enemy != null) enemy.Sandwich();
-
-            //Förstör myntet när spelaren har samlat det
-            Destroy(gameObject);
+            if (enemy != null) enemy.FlyTrap();
         }
         
         // gameObject: inbygd funktion, refererar till gameobject:et som klassen ligger i
