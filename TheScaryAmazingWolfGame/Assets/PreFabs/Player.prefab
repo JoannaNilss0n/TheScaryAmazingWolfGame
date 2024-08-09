@@ -50,6 +50,7 @@ GameObject:
   - component: {fileID: 2087202410791202617}
   - component: {fileID: 7006070258778438215}
   - component: {fileID: 4672308997652298497}
+  - component: {fileID: 1415660829968966728}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -239,6 +240,20 @@ MonoBehaviour:
     m_Bits: 128
   attackDamage: 40
   attackRate: 2
+--- !u!114 &1415660829968966728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1662901935966597979}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3a4b72f83aa60a4eb4be487e208c624, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  runSpeed: 0.5
+  horizontalMove: 0
 --- !u!1 &2363514924023434240
 GameObject:
   m_ObjectHideFlags: 0
@@ -502,7 +517,7 @@ Transform:
   m_GameObject: {fileID: 7561085134550297272}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.51, y: 0.21, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

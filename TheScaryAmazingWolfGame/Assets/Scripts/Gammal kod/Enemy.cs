@@ -124,7 +124,7 @@ public class Enemy : MonoBehaviour
         }
         else
         {
-            speed = 2;
+            speed = 3;
 
             if (curentPoint == B.transform)
             {
