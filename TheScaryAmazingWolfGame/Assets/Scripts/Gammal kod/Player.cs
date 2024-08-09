@@ -110,14 +110,14 @@ public class Player : MonoBehaviour
 
     public void die()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(4);
     }
 
     public void Victory()
     {
         if (money >= 1)
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(3);
         }
     }
     

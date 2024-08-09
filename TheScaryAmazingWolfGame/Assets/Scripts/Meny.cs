@@ -10,6 +10,21 @@ public class Meny : MonoBehaviour
         SceneManager.LoadScene(1);
     }
 
+    public void OnWinButton ()
+    {
+        SceneManager.LoadScene(0);
+    }
+
+    public void OnloseButton ()
+    {
+        SceneManager.LoadScene(0);
+    }
+
+    public void OnStoryButton ()
+    {
+        SceneManager.LoadScene(2);
+    }
+
     public void OnQuitButton ()
     {
         Application.Quit();

@@ -9,9 +9,15 @@ EditorBuildSettings:
     path: Assets/Scenes/Meny.unity
     guid: 350b182acd2a2134aba11e99b3be49ed
   - enabled: 1
+    path: Assets/Scenes/Story+Controlls.unity
+    guid: 79f0e7016bb06ed41aac980dc23144d9
+  - enabled: 1
     path: "Assets/Scenes/Z\xE4tha.unity"
     guid: f3714fa59e0ac544f9307506dda68d90
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/Winning.unity
+    guid: d0ae2cee21a00714fafed307a62c129c
+  - enabled: 1
+    path: Assets/Scenes/Losing.unity
+    guid: da394d8d68a18be44be4641f65e77bdd
   m_configObjects: {}
