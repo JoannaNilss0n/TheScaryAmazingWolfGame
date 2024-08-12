@@ -12,8 +12,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Story+Controlls.unity
     guid: 79f0e7016bb06ed41aac980dc23144d9
   - enabled: 1
-    path: "Assets/Scenes/Z\xE4tha.unity"
-    guid: f3714fa59e0ac544f9307506dda68d90
+    path: Assets/Scenes/LevelOne.unity
+    guid: f27f06d799a88094f90583ae79caa68b
   - enabled: 1
     path: Assets/Scenes/Winning.unity
     guid: d0ae2cee21a00714fafed307a62c129c

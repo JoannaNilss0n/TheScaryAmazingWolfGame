@@ -242,7 +242,7 @@ public class Enemy : MonoBehaviour
 
     public void FlyTrap()
     {
-        activateDistance = 100;
-        speed = 9;
+        activateDistance = 1000;
+        speed = 100;
     }
 }
