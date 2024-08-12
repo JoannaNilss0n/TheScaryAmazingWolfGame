@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 32ef178bc75ba91488d28d9386cf7142
+guid: 8cd7ea820f5a52247a7607ece01323c7
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,12 +110,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: AOldman_Jumptest1_0
+      name: Oldman_Dying_0
       rect:
         serializedVersion: 2
-        x: 9
+        x: 4
         y: 0
-        width: 23
+        width: 19
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 33596edd0806a8c45bbccea97c39d01d
-      internalID: -1700089407
+      spriteID: 801def30176ca7448b2eda115eb88ee5
+      internalID: -170984644
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AOldman_Jumptest1_1
+      name: Oldman_Dying_1
       rect:
         serializedVersion: 2
-        x: 47
+        x: 52
         y: 0
-        width: 21
-        height: 32
+        width: 19
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,8 +145,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: be4fd59b01c5ff5478d97dda12100808
-      internalID: 968199621
+      spriteID: 9c9d7ad7946d0a543b89c090dd02aa3a
+      internalID: 1281184814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oldman_Dying_2
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 0
+        width: 27
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f92701bcd910f9e4db5a92f2f78c3a3f
+      internalID: 89089136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oldman_Dying_3
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 0
+        width: 32
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad96cfa2e520d6046a3b3317e125f1fa
+      internalID: 1983188012
       vertices: []
       indices: 
       edges: []
@@ -162,8 +204,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      AOldman_Jumptest1_0: -1700089407
-      AOldman_Jumptest1_1: 968199621
+      Oldman_Dying_0: -170984644
+      Oldman_Dying_1: 1281184814
+      Oldman_Dying_2: 89089136
+      Oldman_Dying_3: 1983188012
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

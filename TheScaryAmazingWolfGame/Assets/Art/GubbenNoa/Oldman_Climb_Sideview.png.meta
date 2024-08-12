@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 32ef178bc75ba91488d28d9386cf7142
+guid: f68abb626c1f7084eb739f3973efbb36
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,12 +110,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: AOldman_Jumptest1_0
+      name: Oldman_Climb_Sideview_0
       rect:
         serializedVersion: 2
         x: 9
-        y: 0
-        width: 23
+        y: 7
+        width: 16
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -124,19 +124,40 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 33596edd0806a8c45bbccea97c39d01d
-      internalID: -1700089407
+      spriteID: 0a01987972b5f9e49b684cc96b831a4c
+      internalID: -944518580
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AOldman_Jumptest1_1
+      name: Oldman_Climb_Sideview_1
       rect:
         serializedVersion: 2
-        x: 47
-        y: 0
-        width: 21
+        x: 41
+        y: 6
+        width: 16
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1704ffa188758a46a26e6118a4650cb
+      internalID: 737316981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oldman_Climb_Sideview_2
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 7
+        width: 16
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -145,8 +166,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: be4fd59b01c5ff5478d97dda12100808
-      internalID: 968199621
+      spriteID: d34c3a3fa44e7554c8f324af537417f2
+      internalID: -675818294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oldman_Climb_Sideview_3
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 6
+        width: 16
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e246f374c1d5c614481bf0dd1aaa999b
+      internalID: 261227311
       vertices: []
       indices: 
       edges: []
@@ -162,8 +204,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      AOldman_Jumptest1_0: -1700089407
-      AOldman_Jumptest1_1: 968199621
+      Oldman_Climb_Sideview_0: -944518580
+      Oldman_Climb_Sideview_1: 737316981
+      Oldman_Climb_Sideview_2: -675818294
+      Oldman_Climb_Sideview_3: 261227311
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

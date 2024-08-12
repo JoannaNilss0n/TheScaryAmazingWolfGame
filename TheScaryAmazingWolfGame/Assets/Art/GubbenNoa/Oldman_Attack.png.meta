@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 32ef178bc75ba91488d28d9386cf7142
+guid: 5b4a27b3bc0f1f247a65c60dd1b47f9b
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,12 +110,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: AOldman_Jumptest1_0
+      name: Oldman_Attack_0
       rect:
         serializedVersion: 2
-        x: 9
+        x: 2
         y: 0
-        width: 23
+        width: 20
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -124,19 +124,61 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 33596edd0806a8c45bbccea97c39d01d
-      internalID: -1700089407
+      spriteID: 268539f18de932d4fb553ab7b48f7c83
+      internalID: 767525770
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AOldman_Jumptest1_1
+      name: Oldman_Attack_1
       rect:
         serializedVersion: 2
-        x: 47
+        x: 52
+        y: 0
+        width: 23
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93498a7f0c3ae9740900fd66e2b044e9
+      internalID: 488305171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oldman_Attack_2
+      rect:
+        serializedVersion: 2
+        x: 100
         y: 0
         width: 21
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81e555cdc2b55f84ba86ae73bbe0eab2
+      internalID: 1540408536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oldman_Attack_3
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 0
+        width: 20
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -145,8 +187,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: be4fd59b01c5ff5478d97dda12100808
-      internalID: 968199621
+      spriteID: ea9086ff9bd35ea4f902e6c0494dafa5
+      internalID: -1155874280
       vertices: []
       indices: 
       edges: []
@@ -162,8 +204,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      AOldman_Jumptest1_0: -1700089407
-      AOldman_Jumptest1_1: 968199621
+      Oldman_Attack_0: 767525770
+      Oldman_Attack_1: 488305171
+      Oldman_Attack_2: 1540408536
+      Oldman_Attack_3: -1155874280
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
