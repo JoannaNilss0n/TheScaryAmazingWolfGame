@@ -19,6 +19,8 @@ public class Player : MonoBehaviour
 
     //Referens till animatorn
     [SerializeField]private Animator anim;
+
+
     //Audio
     //public AudioSource audiosource;
     //public AudioSource audiosource2;
