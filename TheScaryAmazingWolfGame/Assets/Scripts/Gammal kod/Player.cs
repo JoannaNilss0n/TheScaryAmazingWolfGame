@@ -34,6 +34,9 @@ public class Player : MonoBehaviour
     //Audio
     public AudioSource audiosource;
     public AudioSource audiosource2;
+    
+ 
+    
     [SerializeField] private Transform groundCheckTransform;
     [SerializeField] private float groundCheckRadius;
     [SerializeField] private LayerMask groundCheckLayers;
@@ -43,8 +46,14 @@ public class Player : MonoBehaviour
         rb2D = GetComponent<Rigidbody2D>(); //hämtar spelarens rigidbody
         controller = GetComponent<CharacterController2D>(); //hämtar lite stulen kod som gör att karaktären kan gå
         audiosource = GetComponent<AudioSource>(); //hämtar audio
+        
         reSpawnPoint = transform.position;
     }
+
+    
+    
+
+
 
     void Update()
     {
@@ -88,19 +97,19 @@ public class Player : MonoBehaviour
 
          if(horizontalMove < -0.1f || horizontalMove > 0.1f)
         {
-            /*if (!audiosource.isPlaying)
+            if (!audiosource.isPlaying)
             {
-                //audiosource.Play();
-            }*/
+                audiosource.Play();
+            }
         } 
-        /*else if(moveInput == 0)
+        else if(horizontalMove == 0)
         {
-            //audiosource.Stop();
-        }*/
-        /*if (GroundCheck() == false)
+            audiosource.Stop();
+        }
+        if (GroundCheck() == false)
         {    
-            //audiosource.Stop();
-        }*/
+            audiosource.Stop();
+        }
 
     }
 
@@ -190,10 +199,11 @@ public class Player : MonoBehaviour
         currentAnimation = newState;
     }
     
-    /*public bool GroundCheck()
+    public bool GroundCheck()
     {
         return Physics2D.OverlapCircle(groundCheckTransform.position, groundCheckRadius, groundCheckLayers);
-    }*/
-    
+    }
 
+    
+    
 }
