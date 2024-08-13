@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     bool jump = false;
     public bool crouch = false;
     [SerializeField] private int health = 100;
+    public int smörgåsBit;
 
     Vector2 reSpawnPoint;
 
@@ -27,6 +28,7 @@ public class Player : MonoBehaviour
     private const string ANIM_CROUCH = "Oldman_Crouch";
     private const string ANIM_CLIMB = "Oldman_Climb";
     private string currentAnimation;
+    
 
 
     //Audio
@@ -105,6 +107,11 @@ public class Player : MonoBehaviour
     public void AddMoney(int amount)
     {
         money += amount;
+    }
+
+    public void AddSmörgåsBit(int amount)
+    {
+        smörgåsBit += amount;
     }
 
 
