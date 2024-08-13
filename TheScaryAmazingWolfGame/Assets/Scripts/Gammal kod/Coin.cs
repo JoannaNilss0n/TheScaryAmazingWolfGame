@@ -7,7 +7,7 @@ public class Coin : MonoBehaviour
         if ( collision.gameObject.CompareTag("Player"))
         {
             Player player = collision.gameObject.GetComponent<Player>();
-            if (player.smörgåsBit >= 12)
+            if (player.smörgåsBit >= 4)
             {
                 Enemy enemy = GameObject.FindGameObjectWithTag("Enemy").gameObject.GetComponent<Enemy>();
 
