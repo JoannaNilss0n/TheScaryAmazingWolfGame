@@ -34,6 +34,7 @@ public class Player : MonoBehaviour
     //Audio
     public AudioSource audiosource;
     public AudioSource audiosource2;
+    public AudioSource audiosource3;
     
  
     
@@ -65,6 +66,8 @@ public class Player : MonoBehaviour
         {
             Debug.Log(horizontalMove);
             jump = true;
+            
+
             //anim.SetBool("IsJumping", true);
         }
 
@@ -93,24 +96,30 @@ public class Player : MonoBehaviour
     void FixedUpdate()
     {
         controller.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump);
+        Debug.Log(controller.m_Grounded);
         jump = false;
 
-         if(horizontalMove < -0.1f || horizontalMove > 0.1f)
+         
+        if(horizontalMove == 0 ||controller.m_Grounded == false)
+        {
+            audiosource.Stop();
+        }
+        else if(horizontalMove < -0.1f || horizontalMove > 0.1f)
         {
             if (!audiosource.isPlaying)
             {
                 audiosource.Play();
             }
         } 
-        else if(horizontalMove == 0)
+        if(controller.m_Grounded == true)
         {
-            audiosource.Stop();
+            audiosource2.Play();
         }
-        if (GroundCheck() == false)
-        {    
-            audiosource.Stop();
+        if(controller.m_Grounded == false)
+        {
+            audiosource3.Play();
         }
-
+        
     }
 
     public void AddMoney(int amount)
@@ -127,7 +136,7 @@ public class Player : MonoBehaviour
     public void TakeDamge(int damage)
     {
         health -= damage;
-        //audiosource2.Play();
+       
 
         if (health <= 0)
         {
