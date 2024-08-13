@@ -8,6 +8,14 @@ public class Enemy : MonoBehaviour
     [SerializeField] private int maxHealth = 100;
     int curentHealth;
     [SerializeField] private Vector2 ChasePoint;
+    [SerializeField] Animator anim;
+    private string currentAnimation;//*
+    private bool isAttacking = false;
+    private const string ANIM_IDLE = "Standingwolf";//*
+    private const string ANIM_RUN = "Runwolf";//*
+    private const string ANIM_LOOK = "lookingaroundwolf";//*
+    private const string ANIM_JUMP = "jumpwolf";//*
+    private const string ANIM_BITE = "bitewolf";//*
 
 
     [Header("Patrolling")]
@@ -64,7 +72,7 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        PlayAnimationState();
     }
 
     public void Sandwich()
@@ -97,7 +105,6 @@ public class Enemy : MonoBehaviour
                 //rb.velocity = new Vector2(rb.velocity.x, jumpForce);
                 rb.AddForce(Vector3.up*jumpForce*10);
                 StartCoroutine(JumpCoolDown());
-
             }
         }
         if (isGrounded)
@@ -234,6 +241,9 @@ public class Enemy : MonoBehaviour
             Enemy enemy = GameObject.FindGameObjectWithTag("Enemy").gameObject.GetComponent<Enemy>();
 
             player.TakeDamge(1000);
+
+            isAttacking = true;
+            ChangeAnimationState(ANIM_BITE);//*
         }
         
         // gameObject: inbygd funktion, refererar till gameobject:et som klassen ligger i
@@ -244,5 +254,32 @@ public class Enemy : MonoBehaviour
     {
         activateDistance = 1000;
         speed = 100;
+    }
+
+    void PlayAnimationState()//*
+    {
+        if (isGrounded && !isAttacking) // kollar om isGrounden är sant
+        {
+            if (rb.velocity.x != 0)
+            {
+                ChangeAnimationState(ANIM_RUN);
+            }
+            else
+            {
+                ChangeAnimationState(ANIM_IDLE);
+            }
+        }
+        if (!isGrounded && !isAttacking) // kollar om isGrounden är falskt
+        {
+            ChangeAnimationState(ANIM_JUMP);
+        }
+    }
+
+    void ChangeAnimationState(string newState)//*
+    {
+        //En metod som kollar vilken animation den spelar just nu
+        if (currentAnimation == newState) return;
+        anim.Play(newState);
+        currentAnimation = newState;
     }
 }
