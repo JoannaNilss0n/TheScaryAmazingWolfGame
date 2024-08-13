@@ -43,6 +43,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7204082101346046076}
+  - component: {fileID: 2927759544582929758}
   - component: {fileID: 2226262295736663727}
   - component: {fileID: 8189534660553872602}
   - component: {fileID: 751966473856458146}
@@ -77,6 +78,58 @@ Transform:
   - {fileID: 696558354888942770}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &2927759544582929758
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1662901935966597979}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: -640499227, guid: f0da2b63066067a458b4d3e76305a3fd, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1.125, y: 2}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!114 &2226262295736663727
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -99,7 +152,9 @@ MonoBehaviour:
   m_GroundCheck: {fileID: 7292237828259870099}
   m_CeilingCheck: {fileID: 8598146503151621924}
   m_CrouchDisableCollider: {fileID: 0}
-  Sprite: {fileID: 696558354888942770}
+  Sprite: {fileID: 7204082101346046076}
+  m_Grounded: 0
+  m_Rigidbody2D: {fileID: 0}
   OnLandEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -124,7 +179,15 @@ MonoBehaviour:
   health: 100
   rb2D: {fileID: 0}
   controller: {fileID: 2226262295736663727}
+  ladderMovement: {fileID: 7006070258778438215}
   anim: {fileID: 2087202410791202617}
+  audiosource: {fileID: 0}
+  audiosource2: {fileID: 0}
+  groundCheckTransform: {fileID: 0}
+  groundCheckRadius: 0
+  groundCheckLayers:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!70 &751966473856458146
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -197,7 +260,7 @@ Animator:
   m_GameObject: {fileID: 1662901935966597979}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0775658fde0075040aff5cbcbd7dee4c, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -220,6 +283,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5de28188e3b6b534ca9bab64ff906ffd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isClimbing: 0
   rb: {fileID: 6073852198842978547}
 --- !u!114 &4672308997652298497
 MonoBehaviour:
@@ -424,7 +488,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &9147764959459262811
 Transform:
   m_ObjectHideFlags: 0
@@ -539,7 +603,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6826081049469213403
 Transform:
   m_ObjectHideFlags: 0
