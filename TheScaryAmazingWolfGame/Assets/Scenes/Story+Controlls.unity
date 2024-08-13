@@ -795,11 +795,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: You wake up in the midel of the night. You decide to go to the kichen to
-    make a sandwich. When you get to the kichen you remeber you have waxed the flor
-    so its very slipery. You alos realise that a wolf has broken in to you kichen.
-    Your goal is now to make a sandwich and get out before the wolf finds and kills
-    you.
+  m_text: You wake up in the middle of the night. You decide to go to the kichen
+    to make a sandwich. When you get to the kichen you remember you have waxed the
+    floor so it's very slipery. You also realize that a wolf has broken in to your
+    kitchen. Your goal is now to make a sandwich and get out before the wolf finds
+    and kills you.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
