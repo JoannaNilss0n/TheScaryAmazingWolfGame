@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 888522757714972473}
   - component: {fileID: 7715039288516328998}
   - component: {fileID: 1638406617857562210}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: FlyTrap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.81, y: -36.35, z: 0}
-  m_LocalScale: {x: 6.74, y: 1, z: 1}
+  m_LocalScale: {x: 3.886486, y: 1.9125935, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -164,7 +164,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.35}
+  m_Offset: {x: 0, y: 0.11999965}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -175,7 +175,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.62}
+  m_Size: {x: 1, y: 1.1599998}
   m_EdgeRadius: 0
 --- !u!114 &1638406617857562210
 MonoBehaviour:
